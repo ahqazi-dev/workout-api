@@ -1,0 +1,15 @@
+[phases.build]
+cmds = ["pip install -r requirements.txt"]
+
+[start]
+cmd = "uvicorn api.main:app --host 0.0.0.0 --port $PORT"
+```
+
+---
+
+**Also set the start command manually on Railway:**
+- Click **Settings** tab
+- Find **Start Command**
+- Enter:
+```
+uvicorn api.main:app --host 0.0.0.0 --port $PORT
